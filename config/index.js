@@ -3,6 +3,9 @@
 const path = require('path')
 
 const config = {
+  webpackChain(chain, webpack) {
+    // H5 模式 webpack 配置由 @tarojs/plugin-platform-h5 插件处理
+  },
   projectName: 'taro-cross-platform-app',
   date: '2026-4-5',
   designWidth: 750,
@@ -13,7 +16,15 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
-  plugins: [],
+  plugins: [
+    ['@tarojs/plugin-platform-h5', {
+      // H5 模式配置
+      router: {
+        mode: 'browser',
+        basename: '/'
+      }
+    }]
+  ],
   defineConstants: {},
   alias: {
     '@': path.resolve(__dirname, '..', 'src'),
@@ -64,6 +75,17 @@ const config = {
     publicPath: '/',
     staticDirectory: 'static',
     esnextModules: ['taro-ui'],
+    htmlPluginOption: {
+      template: path.resolve(__dirname, '..', 'src/index.html')
+    },
+    output: {
+      filename: 'js/[name].[hash:8].js',
+      chunkFilename: 'js/[name].[chunkhash:8].js'
+    },
+    miniCssExtractPluginOption: {
+      filename: 'css/[name].[hash:8].css',
+      chunkFilename: 'css/[name].[chunkhash:8].css'
+    },
     postcss: {
       autoprefixer: {
         enable: true,
