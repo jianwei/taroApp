@@ -11,6 +11,10 @@ module.exports = (async function () {
       nodeModulesPaths: [
         path.resolve(__dirname, 'node_modules'),
       ],
+      blockList: [
+        /\.worktrees\/.*/,
+        /harmony\/.*/,
+      ]
     },
     watchFolders: [
       path.resolve(__dirname),

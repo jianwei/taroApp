@@ -44,6 +44,7 @@
     "@tarojs/rn-runner": "4.0.8",
     "@tarojs/rn-style-transformer": "4.0.8",
     "@tarojs/rn-supporter": "4.0.8",
+    "@tarojs/router": "4.0.8",
     "@tarojs/runtime": "4.0.8",
     "@tarojs/runtime-rn": "4.0.8",
     "@tarojs/shared": "4.0.8",

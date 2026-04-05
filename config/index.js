@@ -33,7 +33,13 @@ const config = {
     }
   },
   sass: {
-    // 使用 sass 1.77.x 避免 Dart Sass 3.0 弃用警告
+    // 禁用 Dart Sass 弃用警告
+  },
+  sassLoaderOption: {
+    api: 'modern-compiler',
+    sassOptions: {
+      silenceDeprecations: ['import', 'legacy-js-api', 'global-builtin']
+    }
   },
   mini: {
     postcss: {
