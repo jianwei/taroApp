@@ -1,0 +1,48 @@
+.profile-page {
+  padding: 24px;
+
+  .user-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 48px 32px;
+    margin-bottom: 24px;
+    color: #fff;
+    text-align: center;
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+
+    .nickname {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .phone {
+      font-size: 28px;
+      opacity: 0.8;
+    }
+  }
+
+  .menu-list {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .version {
+    text-align: center;
+    margin-top: 48px;
+    color: #999;
+    font-size: 24px;
+  }
+}
