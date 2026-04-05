@@ -1,0 +1,37 @@
+{
+  "app": {
+    "bundleName": "com.example.tarodemo",
+    "vendor": "example",
+    "version": {
+      "code": 1,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.example.tarodemo.entry",
+    "name": ".entry",
+    "mainAbility": ".MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/profile/index"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 750,
+          "autoDesignWidth": false
+        }
+      }
+    ]
+  }
+}

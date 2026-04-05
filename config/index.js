@@ -100,7 +100,9 @@ const config = {
       cssModules: {
         enable: false
       }
-    }
+    },
+    // 禁用 stylelint
+    enableStylelint: false
   },
   harmony: {
     // 鸿蒙项目路径
