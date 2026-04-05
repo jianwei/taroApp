@@ -8,6 +8,11 @@ node_modules/
 dist/
 .temp/
 .rn_temp/
+harmony/entry/src/main/ets/*.js
+harmony/entry/src/main/ets/*.js.map
+harmony/entry/src/main/ets/npm/
+harmony/entry/src/main/ets/pages/
+harmony/entry/src/main/ets/assets/
 
 # 缓存文件
 node_modules/.taro/
