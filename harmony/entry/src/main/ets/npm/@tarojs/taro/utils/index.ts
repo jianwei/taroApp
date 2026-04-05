@@ -48,7 +48,7 @@ export function temporarilyNotSupport (name: string, recommended?: string) {
       type: 'method',
       category: 'temporarily',
     })
-    if (("production" as string) === 'production') {
+    if (("development" as string) === 'production') {
       console.warn(errMsg)
       return handle.success({ errMsg })
     } else {
@@ -68,7 +68,7 @@ export function permanentlyNotSupport (name = '') {
       type: 'method',
       category: 'permanently',
     })
-    if (("production" as string) === 'production') {
+    if (("development" as string) === 'production') {
       console.warn(errMsg)
       return handle.success({ errMsg })
     } else {

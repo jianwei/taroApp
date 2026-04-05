@@ -1,6 +1,7 @@
+Object.freeze = (obj) => obj 
 'use strict';
 
-if ("production" === 'production') {
+if ("development" === 'production') {
   module.exports = require('./cjs/react-jsx-runtime.production.min.js');
 } else {
   module.exports = require('./cjs/react-jsx-runtime.development.js');

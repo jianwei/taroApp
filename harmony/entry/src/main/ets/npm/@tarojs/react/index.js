@@ -707,7 +707,7 @@ const hostConfig = {
     }
 };
 const TaroReconciler = Reconciler(hostConfig);
-if ("production" !== 'production') {
+if ("development" !== 'production') {
     const foundDevTools = TaroReconciler.injectIntoDevTools({
         bundleType: 1,
         version: '18.0.0',
