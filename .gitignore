@@ -8,11 +8,17 @@ node_modules/
 dist/
 .temp/
 .rn_temp/
+
+# 鸿蒙构建产物
 harmony/entry/src/main/ets/*.js
 harmony/entry/src/main/ets/*.js.map
 harmony/entry/src/main/ets/npm/
 harmony/entry/src/main/ets/pages/
 harmony/entry/src/main/ets/assets/
+harmony/entry/src/main/ets/api/
+harmony/entry/src/main/ets/constants/
+harmony/entry/src/main/ets/store/
+harmony/entry/src/main/ets/utils/
 
 # 缓存文件
 node_modules/.taro/
