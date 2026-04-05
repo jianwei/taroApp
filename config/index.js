@@ -14,7 +14,7 @@ const config = {
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: [
-    '@tarojs/plugin-platform-harmony'
+    '@tarojs/plugin-platform-harmony-ets'
   ],
   defineConstants: {},
   alias: {
@@ -25,7 +25,13 @@ const config = {
     options: {}
   },
   framework: 'react',
-  compiler: 'webpack5',
+  // Taro 4.x compiler 配置格式
+  compiler: {
+    type: 'webpack5',
+    prebundle: {
+      enable: false
+    }
+  },
   sass: {
     // 使用 sass 1.77.x 避免 Dart Sass 3.0 弃用警告
   },
@@ -88,11 +94,12 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    },
-    router: {
-      mode: 'browser',
-      basename: '/'
     }
+  },
+  // Taro 4.x router 配置
+  router: {
+    mode: 'browser',
+    basename: '/'
   },
   rn: {
     appName: 'taroApp',
@@ -104,11 +111,11 @@ const config = {
     // 禁用 stylelint
     enableStylelint: false
   },
+  // 鸿蒙配置 - Taro 4.0 要求使用 vite
   harmony: {
-    // 鸿蒙项目路径
     projectPath: 'harmony',
-    // 鸿蒙 hap 包名
-    hapName: 'entry'
+    hapName: 'entry',
+    compiler: 'vite'
   }
 }
 
