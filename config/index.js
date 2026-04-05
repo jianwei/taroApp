@@ -115,7 +115,18 @@ const config = {
   harmony: {
     projectPath: 'harmony',
     hapName: 'entry',
-    compiler: 'vite'
+    compiler: 'vite',
+    // 禁用 Sass 弃用警告
+    compilerOptions: {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: 'modern-compiler',
+            silenceDeprecations: ['import', 'legacy-js-api', 'global-builtin']
+          }
+        }
+      }
+    }
   }
 }
 
