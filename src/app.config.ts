@@ -1,7 +1,5 @@
 // @author Claude Code (claude-sonnet-4-6)
 
-import { defineAppConfig } from '@tarojs/taro'
-
 export default defineAppConfig({
   pages: [
     'pages/index/index',

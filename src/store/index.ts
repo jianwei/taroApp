@@ -2,6 +2,7 @@
 
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from 'redux-persist'
+import { useDispatch, useSelector, type TypedUseSelectorHook } from 'react-redux'
 import userReducer from './slices/userSlice'
 import commonReducer from './slices/commonSlice'
 import { TaroStorage } from './storage/taro-storage'
@@ -33,3 +34,6 @@ export const persistor = persistStore(store)
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
+
+export const useAppDispatch: () => AppDispatch = useDispatch
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector

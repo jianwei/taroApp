@@ -24,7 +24,7 @@ export const REQUEST_CONFIG = {
 export const REGEX = {
   PHONE: /^1[3-9]\d{9}$/,
   EMAIL: /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/,
-  ID_CARD: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$/,
+  ID_CARD: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/,
   URL: /^https?:\/\/.+/,
 } as const
 
