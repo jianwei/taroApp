@@ -55,3 +55,4 @@ playwright-report/
 !src/assets/**/*.png
 !src/assets/**/*.jpg
 !src/assets/**/*.jpeg
+.worktrees/
