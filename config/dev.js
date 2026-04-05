@@ -1,7 +1,9 @@
+// @author Claude Code (claude-sonnet-4-6)
+
 module.exports = {
   logger: {
     quiet: false,
-    stats: true
+    stats: false
   },
   mini: {},
   h5: {
@@ -18,7 +20,10 @@ module.exports = {
           errors: true,
           warnings: false
         },
-        logging: 'error'
+        logging: 'none'
+      },
+      devMiddleware: {
+        stats: 'errors-only'
       },
       historyApiFallback: {
         rewrites: [
@@ -29,9 +34,5 @@ module.exports = {
         directory: 'dist/h5'
       }
     },
-    htmlPlugin: {
-      template: 'public/index.html',
-      inject: 'body'
-    }
   }
 }

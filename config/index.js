@@ -42,11 +42,8 @@ const config = {
     }
   },
   sass: {
-    resource: [
-      path.resolve(__dirname, '..', 'src/styles/variables.scss')
-    ],
-    data: `@import "${path.resolve(__dirname, '..', 'src/styles/variables.scss')}";
-`
+    // 使用 sass 1.77.x 避免 Dart Sass 3.0 弃用警告
+    // 如需升级 sass，需等待 taro-ui 更新以支持新版 sass 语法
   },
   mini: {
     postcss: {
@@ -79,12 +76,23 @@ const config = {
       template: path.resolve(__dirname, '..', 'src/index.html')
     },
     output: {
-      filename: 'js/[name].[hash:8].js',
-      chunkFilename: 'js/[name].[chunkhash:8].js'
+      filename: 'js/[name].[contenthash:8].js',
+      chunkFilename: 'js/[name].[contenthash:8].js'
     },
     miniCssExtractPluginOption: {
-      filename: 'css/[name].[hash:8].css',
-      chunkFilename: 'css/[name].[chunkhash:8].css'
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css'
+    },
+    // 禁用资源大小警告
+    webpackChain(chain) {
+      chain.performance.hints(false)
+      // 完全忽略所有警告
+      chain.set('ignoreWarnings', [
+        { message: /webpackExports/ },
+        { message: /UnsupportedFeatureWarning/ },
+        /webpackExports/,
+        /UnsupportedFeatureWarning/
+      ])
     },
     postcss: {
       autoprefixer: {
