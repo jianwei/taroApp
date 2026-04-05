@@ -1,0 +1,22 @@
+// @author Claude Code (claude-sonnet-4-6)
+
+// RN 专用样式 - 简化版
+// 不使用 taro-ui 的复杂样式
+
+// 页面容器
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 28px;
+  line-height: 44px;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+// 安全区域适配
+.safe-area-bottom {
+  padding-bottom: 20px;
+}
+
+.safe-area-top {
+  padding-top: 44px;
+}

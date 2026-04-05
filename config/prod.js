@@ -1,10 +1,10 @@
+// @author Claude Code (claude-sonnet-4-6)
+
 module.exports = {
-  mini: {
-    optimizeMainPackage: {
-      enable: true
-    }
-  },
+  mini: {},
   h5: {
-    publicPath: './'
+    miniCssExtractPluginOption: {
+      ignoreOrder: true,
+    }
   }
 }
