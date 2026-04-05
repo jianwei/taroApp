@@ -35,13 +35,13 @@ const config = {
   sass: {
     // 禁用 Dart Sass 弃用警告
   },
-  sassLoaderOption: {
-    api: 'modern-compiler',
-    sassOptions: {
-      silenceDeprecations: ['import', 'legacy-js-api', 'global-builtin']
-    }
-  },
   mini: {
+    sassLoaderOption: {
+      api: 'legacy',
+      sassOptions: {
+        silenceDeprecations: ['import', 'legacy-js-api', 'global-builtin']
+      }
+    },
     postcss: {
       pxtransform: {
         enable: true,
@@ -67,6 +67,12 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    sassLoaderOption: {
+      api: 'legacy',
+      sassOptions: {
+        silenceDeprecations: ['import', 'legacy-js-api', 'global-builtin']
+      }
+    },
     esnextModules: ['taro-ui'],
     htmlPluginOption: {
       template: path.resolve(__dirname, '..', 'src/index.html')
