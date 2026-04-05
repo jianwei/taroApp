@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"npx tsc --noEmit 2>&1\",\"timeout\":120000,\"description\":\"最终 TypeScript 类型检查\"}",
-  "error": "Exit code 2\nsrc/api/request.ts(32,78): error TS2344: Type 'T' does not satisfy the constraint 'string | IAnyObject | ArrayBuffer'.\n  Type 'T' is not assignable to type 'ArrayBuffer'.\nsrc/utils/storage.ts(28,5): error TS2559: Type 'CallbackResult' has no properties in common with type 'Option'.",
-  "timestamp": "2026-04-05T02:04:29.655Z",
-  "retry_count": 2
-}
