@@ -1,0 +1,76 @@
+// @author Claude Code (claude-sonnet-4-6)
+
+// 主色调
+$color-primary: #6190e8;
+$color-primary-light: #78a4f6;
+$color-primary-dark: #346fc2;
+
+// 辅助色
+$color-success: #13ce66;
+$color-warning: #ffcc00;
+$color-danger: #ff4949;
+$color-info: #78a4f6;
+
+// 文字色
+$color-text: #333333;
+$color-text-secondary: #666666;
+$color-text-light: #999999;
+$color-text-lighter: #cccccc;
+
+// 背景色
+$color-bg: #f5f5f5;
+$color-bg-white: #ffffff;
+$color-bg-gray: #f8f8f8;
+
+// 边框色
+$color-border: #e5e5e5;
+$color-border-light: #eeeeee;
+
+// 字体大小
+$font-size-xs: 20px;
+$font-size-sm: 24px;
+$font-size-base: 28px;
+$font-size-lg: 32px;
+$font-size-xl: 36px;
+$font-size-xxl: 40px;
+
+// 行高
+$line-height-xs: 1.2;
+$line-height-sm: 1.4;
+$line-height-base: 1.6;
+$line-height-lg: 1.8;
+
+// 间距
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-base: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+$spacing-xxl: 64px;
+
+// 圆角
+$border-radius-sm: 4px;
+$border-radius-base: 8px;
+$border-radius-lg: 16px;
+$border-radius-xl: 24px;
+$border-radius-circle: 50%;
+
+// 阴影
+$box-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+$box-shadow-base: 0 4px 16px rgba(0, 0, 0, 0.08);
+$box-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+
+// 过渡
+$transition-fast: 0.15s ease-in-out;
+$transition-base: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;
+
+// z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+$z-index-toast: 1080;
