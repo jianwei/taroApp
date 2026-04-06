@@ -1,22 +1,16 @@
-// @author Claude Code (claude-sonnet-4-6)
+// @author Claude Code (kimi-k2.5)
 
 import { Component, PropsWithChildren } from 'react'
 import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/integration/react'
-import { store, persistor } from './store'
-import Taro from '@tarojs/taro'
-import { fetchSystemInfo, setNetworkStatus } from './store/slices/commonSlice'
+import { store } from './store'
 import './app.scss'
+
+console.log('[app.tsx] Loading app.tsx')
+console.log('[app.tsx] store import:', store)
 
 class App extends Component<PropsWithChildren> {
   componentDidMount() {
-    // 获取系统信息
-    store.dispatch(fetchSystemInfo())
-
-    // 监听网络状态
-    Taro.onNetworkStatusChange((res) => {
-      store.dispatch(setNetworkStatus(res.isConnected ? 'online' : 'offline'))
-    })
+    console.log('[app.tsx] App mounted, store:', store)
   }
 
   componentDidShow() {
@@ -28,11 +22,14 @@ class App extends Component<PropsWithChildren> {
   }
 
   render() {
+    console.log('[app.tsx] Rendering App, store:', store)
+    if (!store) {
+      console.error('[app.tsx] store is undefined!')
+      return <>{this.props.children}</>
+    }
     return (
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          {this.props.children}
-        </PersistGate>
+        {this.props.children}
       </Provider>
     )
   }

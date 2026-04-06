@@ -1,17 +1,15 @@
-// @author Claude Code (claude-sonnet-4-6)
+// @author Claude Code (kimi-k2.5)
 
-import Taro from '@tarojs/taro'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import type { Storage } from 'redux-persist'
 
 export const TaroStorage: Storage = {
   getItem: (key: string) =>
-    Taro.getStorage({ key })
-      .then((res) => res.data)
-      .catch(() => null),
+    AsyncStorage.getItem(key).then((value) => value ? JSON.parse(value) : null),
 
   setItem: (key: string, value: unknown) =>
-    Taro.setStorage({ key, data: value }),
+    AsyncStorage.setItem(key, JSON.stringify(value)),
 
   removeItem: (key: string) =>
-    Taro.removeStorage({ key }),
+    AsyncStorage.removeItem(key),
 }

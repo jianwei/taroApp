@@ -1,36 +1,28 @@
-// @author Claude Code (claude-sonnet-4-6)
+// @author Claude Code (kimi-k2.5)
 
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { persistStore, persistReducer } from 'redux-persist'
 import { useDispatch, useSelector, type TypedUseSelectorHook } from 'react-redux'
 import userReducer from './slices/userSlice'
 import commonReducer from './slices/commonSlice'
-import { TaroStorage } from './storage/taro-storage'
 
-const persistConfig = {
-  key: 'root',
-  storage: TaroStorage,
-  whitelist: ['user'],
-}
+console.log('[store/index.ts] Loading store/index.ts')
+console.log('[store/index.ts] userReducer:', userReducer)
+console.log('[store/index.ts] commonReducer:', commonReducer)
 
 const rootReducer = combineReducers({
   user: userReducer,
   common: commonReducer,
 })
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
-
 export const store = configureStore({
-  reducer: persistedReducer,
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
-      },
+      serializableCheck: false,
     }),
 })
 
-export const persistor = persistStore(store)
+console.log('[store/index.ts] store created:', store)
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

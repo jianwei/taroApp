@@ -1,4 +1,4 @@
-// @author Claude Code (claude-sonnet-4-6)
+// @author Claude Code (kimi-k2.5)
 module.exports = {
   presets: [
     ['taro', {
