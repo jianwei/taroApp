@@ -67,3 +67,35 @@ playwright-report/
 !src/assets/**/*.jpg
 !src/assets/**/*.jpeg
 .worktrees/
+
+# iOS 构建产物和依赖
+ios/build/
+ios/ios/build/
+ios/ios/node_modules/
+ios/ios/DerivedData/
+ios/ios/*.xcworkspace/xcuserdata/
+ios/ios/*.xcodeproj/xcuserdata/
+ios/ios/*.xcodeproj/project.xcworkspace/xcuserdata/
+ios/*.xcworkspace/xcuserdata/
+ios/ios/.xcode.env.local
+ios/ios/.swc/
+ios/ios/EOF
+ios/ios/package.json
+ios/ios/package-lock.json
+ios/ios/pnpm-lock.yaml
+ios/ios/react-native.config.js
+# CocoaPods 依赖可以通过 Podfile 重新安装
+ios/ios/Pods/
+
+# Android 构建产物
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/*.iml
+android/app/*.iml
+
+# React Native 相关
+*.jsbundle
+*.bundle
+ metro-*.log
